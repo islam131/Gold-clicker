@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gold Clicker</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: sans-serif;
+      background: #111;
+      color: #fff;
+    }
+    #coin {
+      width: 200px;
+      margin-top: 50px;
+      cursor: pointer;
+      transition: transform 0.1s;
+    }
+    #coin:active {
+      transform: scale(0.95);
+    }
+    #points {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Click to Earn Gold</h1>
+  <img src="https://i.ibb.co/xH6qJZW/gold-coin.png" id="coin" onclick="addPoint()" alt="Gold Coin" />
+  <div id="points">Points: 0</div>
+
+  <script>
+    let points = 0;
+    function addPoint() {
+      points += 1;
+      document.getElementById("points").innerText = "Points: " + points;
+    }
+  </script>
+</body>
+</html>
